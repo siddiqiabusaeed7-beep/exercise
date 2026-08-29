@@ -2,26 +2,22 @@
 
 #include<stdio.h>
 
-int add (int x);
+int sum (int n);
+
 
 int main (void)
 {
-    int n, i = 0, sum = 0;
-
-
-    printf("enter a number n");
+    int n;
+    printf("enter a no. n:");
     scanf("%d",&n);
-
     printf("%d",sum(n));
-}
 
-int add (int x)
+}
+int sum (int n)
 {
-    if(i<n)
-    {
-        sum = sum + i;
-        sum(i+1);
-    }
-    return sum;
+    if (n == 0)
+        return 0;
+    else
+        return sum(n-1) + n;
 
 }
